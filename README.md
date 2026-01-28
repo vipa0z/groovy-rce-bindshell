@@ -1,3 +1,4 @@
+A JSP based bindshell through groovy script, Useful in scenarios where its not possible to obtain reverse shells. 
 
-When RCE is limited to a Groovy-style script console and outbound callbacks are blocked, the console becomes your primary transfer channel. I published a detailed, hands-on guide (with examples and screenshots) showing a compact Groovy/Java bind‑shell and a chunked Base64 file-transfer method that make reliable tool delivery and post‑exploit work possible.
-See the full post on my GitHub Pages: [vipa0z.github.io/2025/10/22/Remote%20Code%20Execution%20in%20liferay-jenkins](vipa0z.github.io/2025/10/22/Remote%20Code%20Execution%20in%20liferay-jenkins)
+#### example use case:
+your initial access is limited to a groovy console and it's not possible to catch reverse shells(firewall blocks outgoing connections), I published a detailed POC demonstrating why and how to use this script: [https://vipa0z.github.io/2025/10/22/groovy-consoles-for-initial-access](https://vipa0z.github.io/2025/10/22/abusing-groovy-script-consoles/)
