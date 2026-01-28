@@ -1,2 +1,24 @@
-A groovy script that writes JSP bindshell to web root. Useful in scenarios where its not possible to obtain reverse shells. 
-example use case: your initial access is limited to a groovy console and it's not possible to catch reverse shells(firewall blocks outgoing connections), I published a detailed POC demonstrating why and how to use this script here: [https://vipa0z.github.io/2025/10/22/groovy-consoles-for-initial-access](https://vipa0z.github.io/2025/10/22/abusing-groovy-script-consoles/)
+
+A Groovy RCE payload that writes a JSP bind shell into the web application root.
+This is useful in environments where outbound connections are restricted and reverse shells are not feasible (e.g., strict egress firewalling).
+
+**Example use case:**
+
+> Initial access is limited to a Groovy script console, and outbound network connections are blocked, preventing reverse shell callbacks.
+> This technique demonstrates how to pivot to an inbound bind shell instead.
+
+I published a detailed PoC explaining the why and how here:
+[https://vipa0z.github.io/2025/10/22/abusing-groovy-script-consoles/](https://vipa0z.github.io/2025/10/22/abusing-groovy-script-consoles/)
+
+**Usage**
+
+1. Modify paths to match the target web application deployment directory.
+2. Execute the Groovy script to drop the JSP bind shell on disk.
+3. Trigger the bind shell by requesting the JSP endpoint:
+
+   ```bash
+   curl https://target/bindshell.jsp
+   ```
+
+---
+
